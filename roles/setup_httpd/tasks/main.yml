@@ -22,6 +22,7 @@
     service: http
     permanent: yes
     state: enabled
+  notify: Reload firewalld
 
 - name: Copy index page
   template:

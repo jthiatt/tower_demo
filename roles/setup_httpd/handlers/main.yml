@@ -5,3 +5,7 @@
     name: httpd
     state: restarted
 
+- name: Reload firewalld
+  service: firewalld
+    state: reloaded
+
