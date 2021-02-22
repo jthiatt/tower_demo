@@ -8,7 +8,7 @@
         url: "http://{{ item }}"
         return_content: yes
       register: this
-      failed_when: "'ansible' not in this.content"
+      failed_when: "'Ansible' not in this.content"
       loop: "{{ groups['webservers'] }}"
       delegate_to: localhost
 
