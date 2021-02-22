@@ -1,6 +1,9 @@
 ---
 - name: Setup HTTPD
   hosts: webservers
+  vars:
+    - custom_message: "Hello World"
+ 
   become: true
 
   roles:
