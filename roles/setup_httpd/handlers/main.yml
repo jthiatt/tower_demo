@@ -6,6 +6,7 @@
     state: restarted
 
 - name: Reload firewalld
-  service: firewalld
+  service: 
+    name: firewalld
     state: reloaded
 
