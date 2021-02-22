@@ -4,8 +4,6 @@
   vars:
     - custom_message: "Hello World"
  
-  become: true
-
   roles:
     - setup_httpd
 
