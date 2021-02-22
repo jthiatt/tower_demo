@@ -3,7 +3,7 @@
 
 - name: Install httpd
   dnf:
-    name: 
+    name:
       - httpd
       - firewalld
     state: present
@@ -21,6 +21,6 @@
   template:
     src: index.html.j2
     dest: /var/www/html/index.html
-   notify: Restart httpd
+  notify: Restart httpd
 
 
