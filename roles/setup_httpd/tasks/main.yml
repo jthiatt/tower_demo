@@ -17,6 +17,12 @@
     - firewalld
     - httpd
 
+- name: Open port 80
+  firewalld:
+    service: http
+    permanent: yes
+    state: enabled
+
 - name: Copy index page
   template:
     src: index.html.j2
