@@ -1,0 +1,14 @@
+---
+- name: Check results
+  hosts: all
+
+  - tasks:
+      - name: Check index.html
+        uri:
+          url: "http://{{ item.ansible_default_ipv4.address }}"
+          return_content: yes
+        register: this
+        failed_when: "'AWESOME' not in this.content"
+        loop: "{{ groups['webservers'] }}"
+        delegate_to: localhost
+
