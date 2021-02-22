@@ -1,0 +1,7 @@
+---
+- name: Setup HTTPD
+  hosts: webservers
+
+  roles:
+    - setup_httpd
+
