@@ -12,3 +12,8 @@
       loop: "{{ groups['webservers'] }}"
       delegate_to: localhost
 
+    - name: Debug
+      debug:
+        msg: "{{ this }}"
+      delegate_to: localhost
+
