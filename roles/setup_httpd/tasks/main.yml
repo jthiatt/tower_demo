@@ -1,0 +1,26 @@
+---
+# tasks file for setup_httpd
+
+- name: Install httpd
+  dnf:
+    name: 
+      - httpd
+      - firewalld
+    state: present
+
+- name: Setup services
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  loop:
+    - firewalld
+    - httpd
+
+- name: Copy index page
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+   notify: Restart httpd
+
+
