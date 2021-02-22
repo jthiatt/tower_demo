@@ -1,2 +1,7 @@
 ---
 # handlers file for setup_httpd
+- name: Restart httpd
+  service:
+    name: httpd
+    state: restarted
+
