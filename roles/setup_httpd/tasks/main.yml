@@ -24,6 +24,11 @@
     state: enabled
   notify: Reload firewalld
 
+- name: Reload firewalld
+  service:
+    name: firewalld
+    state: reloaded
+
 - name: Copy index page
   template:
     src: index.html.j2
