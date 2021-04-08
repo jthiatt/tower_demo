@@ -10,5 +10,5 @@ jobs:
        - name: Test Run
          env:
            TEST_URL: ${{ secrets.TEST_URL }}
-         run: curl "${TEST_URL}"
+         run: curl https://www.google.com 
 
