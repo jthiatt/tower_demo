@@ -8,5 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
        - name: Test Run
-         run: curl "${{ TEST_URL }}"
+         env:
+           TEST_URL: ${{ secrets.TEST_URL }}
+         run: curl "${TEST_URL}"
 
